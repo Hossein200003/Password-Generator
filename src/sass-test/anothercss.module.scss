@@ -1,0 +1,21 @@
+@use "globalcss";
+
+.redT {
+  color: globalcss.$myColor;
+}
+
+%divs {
+  color: bisque;
+  background-color: cadetblue;
+  margin-bottom: 10px;
+  border: 5px solid bisque;
+}
+
+.div3 {
+  @extend %divs;
+  border-radius: 10px;
+}
+.div4 {
+  @extend %divs;
+  width: 150px;
+}

@@ -1,0 +1,32 @@
+.strength > div {
+  width: 8px;
+  height: 25px;
+  background-color: red;
+  margin: 5px;
+}
+
+.strength {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.strength > div:nth-child(5) {
+  background-color: #8bff87;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  border: 0px solid black;
+  width: calc(400px - 50px);
+  height: 75px;
+  margin-top: 25px;
+  background-color: rgba(0, 0, 0, 0.788);
+  color: rgb(255, 248, 240);
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.main > h3 {
+  display: inline;
+}
