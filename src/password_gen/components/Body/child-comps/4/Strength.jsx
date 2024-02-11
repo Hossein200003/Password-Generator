@@ -8,31 +8,20 @@ import CSS from "./1.module.scss";
 const Strength = () => {
   const { passLength } = useContext(PassLengthContext);
   const { settings } = useContext(PassSettingContext);
-  let strength;
-  if (passLength > 9) {
-    strength = 8;
-  } else if (passLength > 7) {
-    strength = 6;
-  } else if (passLength > 4) {
-    strength = 4;
-  } else if (passLength > 2) {
-    strength = 2;
-  } else if (passLength > 0) {
-    strength = 1;
-  }
+
   let strength2 = 0;
   settings.forEach((obj) => {
-    if (obj.isTrue) {
-      strength2 += 1;
+    if (obj.isTrue && strength2 < 1.8) {
+      strength2 += 0.7;
     }
   });
-  const allStrength = strength * strength2;
+  const allStrength = passLength * strength2;
   console.log("Strength re-render");
 
   let strengthResult = "";
   if (allStrength > 10) {
     strengthResult = "Very strong";
-  } else if (allStrength > 7) {
+  } else if (allStrength > 6) {
     strengthResult = "Strong";
   } else if (allStrength > 4) {
     strengthResult = "Medium";
