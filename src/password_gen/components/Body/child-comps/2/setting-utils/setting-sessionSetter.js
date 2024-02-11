@@ -1,5 +1,5 @@
 const mySessionSetter = (settings, itemName, e) =>
-  sessionStorage.setItem(
+  localStorage.setItem(
     "setting",
     JSON.stringify(
       settings.map((obj) => {

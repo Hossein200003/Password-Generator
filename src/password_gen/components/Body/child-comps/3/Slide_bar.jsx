@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { PassLengthContext } from "../../../../context/PassContext";
 import CSS from "./1.module.scss";
-const s_storage = JSON.parse(sessionStorage.getItem("number"));
+const s_storage = JSON.parse(localStorage.getItem("number"));
 
 const Slide_bar = ({}) => {
   const { setPassLength, passLength } = useContext(PassLengthContext);
   const handeLength = (e) => {
     setPassLength(e.target.value);
-    sessionStorage.setItem("number", JSON.stringify(e.target.value));
+    localStorage.setItem("number", JSON.stringify(e.target.value));
   };
   console.log("Slide_bar re-render");
 
