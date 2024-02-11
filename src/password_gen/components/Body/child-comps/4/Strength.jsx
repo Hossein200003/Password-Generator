@@ -34,7 +34,7 @@ const Strength = () => {
   }
   return (
     <div className={CSS.main}>
-      <h3>Strengthxd: </h3>
+      <h3>Strength: </h3>
       <div className={`${CSS.strength} ${CSS.n}`}>
         <h3>{strengthResult}</h3>
         {/* <div></div>
