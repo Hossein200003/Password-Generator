@@ -11,7 +11,7 @@ const Strength = () => {
 
   let strength2 = 0;
   settings.forEach((obj) => {
-    if (obj.isTrue && strength2 < 1.8) {
+    if (obj.isTrue && strength2 < 1.4) {
       strength2 += 0.7;
     }
   });
@@ -26,7 +26,7 @@ const Strength = () => {
   } else if (allStrength > 4) {
     strengthResult = "Medium";
   } else if (allStrength > 2) {
-    strengthResult = "Weak";
+    strengthResult = "Weakx";
   } else if (allStrength > 0) {
     strengthResult = "Very weak";
   } else {
