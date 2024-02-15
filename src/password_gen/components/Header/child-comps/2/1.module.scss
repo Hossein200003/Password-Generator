@@ -1,3 +1,33 @@
-.x {
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
+  cursor: grab;
+}
+.icon {
+  width: 30px;
+  height: auto;
+}
+.toast {
+  width: 100px;
+  text-align: center;
+  font-size: large;
+  position: fixed;
+  top: 75px;
+  z-index: 2;
+}
+.x {
+  background-color: #ffffffc2;
+  color: #000;
+}
+.toastMother {
+  background-color: #d11717;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }

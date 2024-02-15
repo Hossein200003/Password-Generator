@@ -17,11 +17,12 @@ const Setting = () => {
               type="checkbox"
               defaultChecked={item.isTrue}
               onClick={(e) => {
-                handleSetting(item.name.toUpperCase(), e.target.checked);
+                handleSetting(item.id, e.target.checked);
                 mySessionSetter(settings, item.name, e);
               }}
+              className={CSS.checkbox}
             ></input>
-            <label>{item.name}</label>
+            <label className={CSS.label}>{item.name}</label>
           </div>
         ))}
       </form>

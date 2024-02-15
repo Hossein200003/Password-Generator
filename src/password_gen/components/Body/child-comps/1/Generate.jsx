@@ -19,7 +19,7 @@ const Generate = ({ context }) => {
   console.log(letGenerate);
 
   return (
-    <div className={CSS.center}>
+    <div className={CSS.btnContainer}>
       <button
         onClick={(e) => {
           if (!letGenerate) {

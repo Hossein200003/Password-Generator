@@ -26,11 +26,11 @@ const Strength = () => {
   } else if (allStrength > 4) {
     strengthResult = "Medium";
   } else if (allStrength > 2) {
-    strengthResult = "Weakx";
+    strengthResult = "Weak";
   } else if (allStrength > 0) {
     strengthResult = "Very weak";
   } else {
-    strengthResult = "😐";
+    strengthResult = "None";
   }
   return (
     <div className={CSS.main}>

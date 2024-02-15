@@ -7,8 +7,8 @@ const Password = () => {
   console.log("Password re-render");
 
   return (
-    <div style={{ display: "inline" }}>
-      <h1 style={{ display: "inline" }}>{password}</h1>{" "}
+    <div>
+      <h1 className={CSS.password}>{password}</h1>
     </div>
   );
 };
