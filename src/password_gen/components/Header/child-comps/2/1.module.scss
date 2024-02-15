@@ -10,7 +10,7 @@
   height: auto;
 }
 .toast {
-  width: 100px;
+  width: auto;
   text-align: center;
   font-size: large;
   position: fixed;
@@ -18,8 +18,8 @@
   z-index: 2;
 }
 .x {
-  background-color: #ffffffc2;
-  color: #000;
+  background-color: #000000c2;
+  color: #ffffff;
 }
 .toastMother {
   background-color: #d11717;

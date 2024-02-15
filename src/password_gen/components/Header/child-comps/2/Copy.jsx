@@ -9,7 +9,7 @@ import { createPortal } from "react-dom";
 const Copy = () => {
   const { password } = useContext(PasswordContext);
   const handleCopy = (text) => navigator.clipboard.writeText(text);
-  const showToast = () => toast("Copied");
+  const showToast = () => toast("Copied !");
   const myToastDomElement = document.getElementById("toast");
   console.log("Copy re-render");
 
