@@ -49,6 +49,7 @@ body {
 }
 .reloadContainer:active {
   transform: scale(0.8);
+  background-color: #fffffff5;
 }
 .reloadContainer + p {
   color: white;
