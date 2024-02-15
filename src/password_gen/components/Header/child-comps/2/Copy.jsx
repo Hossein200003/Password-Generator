@@ -10,7 +10,6 @@ const Copy = () => {
   const { password } = useContext(PasswordContext);
   const handleCopy = (text) => navigator.clipboard.writeText(text);
   const showToast = () => toast("Copied !");
-  const myToastDomElement = document.getElementById("toast");
   console.log("Copy re-render");
 
   return (
@@ -24,8 +23,6 @@ const Copy = () => {
       >
         <MdOutlineContentCopy className={CSS.icon} />
       </div>
-
-      {/* {createPortal( */}
       <ToastContainer
         position={"top-center"}
         transition={Zoom}
@@ -37,8 +34,6 @@ const Copy = () => {
         closeButton={false}
         toastClassName={CSS.x}
       />
-      {/* myToastDomElement */}
-      {/* )} */}
     </div>
   );
 };
