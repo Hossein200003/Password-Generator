@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import classNames from "classnames";
 import {
   PassLengthContext,
   PassSettingContext,
 } from "../../../../context/PassContext";
+
 import CSS from "./1.module.scss";
 
 const Strength = () => {
@@ -19,30 +21,66 @@ const Strength = () => {
   console.log("Strength re-render");
 
   let strengthResult = "";
-  if (allStrength > 10) {
-    strengthResult = "Very strong";
-  } else if (allStrength > 6) {
-    strengthResult = "Strong";
-  } else if (allStrength > 4) {
-    strengthResult = "Medium";
-  } else if (allStrength > 2) {
-    strengthResult = "Weak";
-  } else if (allStrength > 0) {
-    strengthResult = "Very weak";
-  } else {
-    strengthResult = "None";
+
+  switch (true) {
+    case allStrength > 10:
+      {
+        strengthResult = "Very strong";
+      }
+      break;
+    case allStrength > 6:
+      {
+        strengthResult = "Strong";
+      }
+      break;
+    case allStrength > 4:
+      {
+        strengthResult = "Medium";
+      }
+      break;
+    case allStrength > 2:
+      {
+        strengthResult = "Weak";
+      }
+      break;
+    case allStrength > 0:
+      {
+        strengthResult = "Very weak";
+      }
+      break;
+    default: {
+      strengthResult = "None";
+    }
   }
+  // const myClass = ;
   return (
     <div className={CSS.main}>
-      <h3>Strength: </h3>
-      <div className={`${CSS.strength} ${CSS.n}`}>
-        <h3>{strengthResult}</h3>
-        {/* <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div> */}
+      <div>
+        <h3>Strength: </h3>
       </div>
+      <StepProgress allStrength={allStrength} />
+      <div className={CSS.strengthStr}>
+        <h3>{strengthResult}</h3>
+      </div>
+    </div>
+  );
+};
+
+const StepProgress = ({ allStrength }) => {
+  const myClass = classNames(`${CSS.strength}`, {
+    [CSS.one]: allStrength > 0,
+    [CSS.two]: allStrength > 2,
+    [CSS.three]: allStrength > 4,
+    [CSS.four]: allStrength > 6,
+    [CSS.five]: allStrength > 10,
+  });
+  return (
+    <div className={`${myClass}`}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   );
 };
