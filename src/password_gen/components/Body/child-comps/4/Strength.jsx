@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import classNames from "classnames";
+import {StepProgress} from './childs/StepProgress.jsx'
+
 import {
   PassLengthContext,
   PassSettingContext,
@@ -11,13 +12,13 @@ const Strength = () => {
   const { passLength } = useContext(PassLengthContext);
   const { settings } = useContext(PassSettingContext);
 
-  let strength2 = 0;
+  let ckeckBox_strength = 0;
   settings.forEach((obj) => {
-    if (obj.isTrue && strength2 < 1.4) {
-      strength2 += 0.7;
+    if (obj.isTrue && ckeckBox_strength < 1.4) {
+      ckeckBox_strength += 0.7;
     }
   });
-  const allStrength = passLength * strength2;
+  const allStrength = passLength * ckeckBox_strength;
   console.log("Strength re-render");
 
   let strengthResult = "";
@@ -66,22 +67,5 @@ const Strength = () => {
   );
 };
 
-const StepProgress = ({ allStrength }) => {
-  const myClass = classNames(`${CSS.strength}`, {
-    [CSS.one]: allStrength > 0,
-    [CSS.two]: allStrength > 2,
-    [CSS.three]: allStrength > 4,
-    [CSS.four]: allStrength > 6,
-    [CSS.five]: allStrength > 10,
-  });
-  return (
-    <div className={`${myClass}`}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  );
-};
+
 export { Strength };

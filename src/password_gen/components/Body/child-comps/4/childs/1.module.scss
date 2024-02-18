@@ -1,29 +1,14 @@
+.strength {
+  display: flex;
+  align-items: center;
+}
+
 .strength > div {
   width: 20px;
   height: 20px;
   transition: background-color 0.3s;
   margin: 5px;
   border-radius: 50%;
-}
-
-.strength {
-  display: flex;
-  align-items: center;
-}
-
-.main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 0px solid black;
-  width: calc(400px - 50px);
-  height: 75px;
-  margin-top: 25px;
-  background-color: rgba(0, 0, 0, 0.788);
-  color: rgb(255, 248, 240);
-  padding-left: 25px;
-  padding-right: 25px;
-  border-radius: 5px;
 }
 .one > div:nth-child(-n + 1):nth-child(n + 1) {
   background-color: #ff2e2e;
@@ -39,9 +24,4 @@
 }
 .five > div:nth-child(-n + 5):nth-child(n + 1) {
   background-color: #46ff2e;
-}
-.strengthStr {
-  background-color: transparent;
-  text-align: center;
-  width: 100px;
 }
